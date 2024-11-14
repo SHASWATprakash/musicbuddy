@@ -26,15 +26,11 @@ jobs:
           npm install
           npm run build
 
-      - name: Install backend dependencies
-        run: |
-          cd backend
-          npm install
+      
 
       - name: Start Appium Server
         run: npm run appium &
 
       - name: Run Appium Tests
-        run: |
-          cd backend
+        run: 
           npm test
